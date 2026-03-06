@@ -3,14 +3,19 @@
 
 Projeto de automação de testes end-to-end utilizando **Cypress**, com integração contínua via **GitHub Actions**.
 
-O objetivo deste repositório é demonstrar como estruturar um projeto de **Qualidade de Software desde o início**, aplicando práticas reais utilizadas em times de engenharia.
-Este projeto não demonstra apenas automação de testes, mas sim uma abordagem completa de Qualidade de Software, incluindo análise de risco, planejamento de testes, definição de cenários críticos e automação focada na proteção das funcionalidades mais importantes para o usuário.
+O objetivo deste repositório é demonstrar como estruturar um projeto de **Qualidade de Software desde o início**, aplicando práticas reais utilizadas em times de engenharia.<br>
+
 
 ---
 
 # 🎯 Objetivo do projeto
 
 Este projeto foi desenvolvido simulando um **Projeto real de QA**, iniciando desde a **Análise de Risco do Produto** até a implementação da automação.
+demonstrando uma abordagem completa de Qualidade de Software, incluindo: 
+* **Análise de risco**
+* **Planejamento de testes**
+* **Definição de cenários críticos e**
+* **Automação focada na proteção das funcionalidades mais importantes para o usuário.**
 
 Antes de iniciar a automação foi realizada uma análise para identificar:
 
@@ -18,7 +23,7 @@ Antes de iniciar a automação foi realizada uma análise para identificar:
 * Quais fluxos **não podem falhar em produção**
 * Quais cenários devem ser validados rapidamente após um deploy
 
-A partir dessa análise foi definido um **fluxo crítico do sistema**, que foi automatizado para servir como **Smoke Test**.
+A partir dessa análise foi definido um **fluxo crítico do sistema**, que foi automatizado para servir como **Smoke Test**.<br>
 Smoke Tests são testes rápidos executados após um deploy para garantir que as funcionalidades essenciais do sistema continuam operando.
 
 
@@ -59,7 +64,7 @@ Esses cenários garantem que **o fluxo principal do usuário continue funcionand
 
 ---
 
-# 📄 Documentação de Qualidade
+# 📄 Documentação
 
 Durante o desenvolvimento deste projeto também foram produzidos documentos comuns ao processo de Quality Assurance em projetos reais.
 
@@ -69,9 +74,7 @@ Esses documentos incluem:
 * **Casos de Teste**
 * **Análise de Risco**
 * **Estratégia de Automação**
-
-O objetivo foi simular o fluxo completo de atuação de um QA dentro de um time de desenvolvimento, desde o planejamento dos testes até a automação dos cenários críticos.
-
+  
 ---
 
 # 📂 Estrutura do projeto
@@ -101,10 +104,10 @@ lumebank-qa-automation
 │   └── support
 │
 ├── docs
-│   ├── test-plan.md
-│   ├── risk-analysis.md
-│   ├── test-cases.md
-│   └── automation-strategy.md
+│   ├── plano-de-testes.md
+│   ├── analise-de-risco.md
+│   ├── casos-de-teste.md
+│   └── estrategia-de-automacao.md
 │  
 ├── cypress.config.js
 ├── package.json
@@ -248,3 +251,4 @@ Essas práticas ajudam a garantir que **alterações no sistema não quebrem fun
 **Marcel Abramo**
 
 QA Engineer | Test Automation | Quality Assurance
+
