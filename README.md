@@ -37,19 +37,23 @@ Caso os testes de smoke passem com sucesso, o processo de qualidade pode seguir 
 
 ---
 
-# 🧠 Estratégia de testes aplicada
+# 🧠 Estratégia de Qualidade Aplicada
 
-A automação deste projeto segue uma abordagem baseada em **Análise de Risco**.
+A estratégia de testes deste projeto foi baseada em **Análise de Risco**, priorizando funcionalidades críticas do sistema.
 
-Fluxos críticos automatizados incluem validações como:
+O objetivo foi identificar quais fluxos possuem maior impacto para o usuário e para o negócio, direcionando o esforço de testes para os cenários que realmente precisam ser protegidos contra falhas.
 
-* Acesso ao sistema
-* Navegação entre funcionalidades principais
-* Execução de operações essenciais
-* Validações de dados apresentados ao usuário
-* Verificação de comportamentos esperados da aplicação
+A abordagem adotada inclui:
 
-Esses cenários garantem que **o fluxo principal do usuário continue funcionando**, mesmo após alterações no sistema.
+* Análise de risco para identificação de funcionalidades críticas
+* Definição de casos de teste baseados em técnicas de projeto de testes
+* Priorização de cenários com maior impacto para o usuário
+* Automação focada em Smoke Tests
+* Execução automática dos testes através de Integração Contínua
+
+Além disso, a estratégia de testes considera os princípios da **Pirâmide de Testes**, equilibrando diferentes níveis de validação do sistema.
+
+Os testes automatizados implementados neste projeto estão concentrados na camada **End-to-End**, validando os fluxos principais da aplicação sob a perspectiva do usuário final.
 
 ---
 
@@ -64,16 +68,38 @@ Esses cenários garantem que **o fluxo principal do usuário continue funcionand
 
 ---
 
+# 🚀 Tecnologias utilizadas
+
+* JavaScript
+* Node.js
+* **:contentReference[oaicite:2]{index=2}** — automação de testes end-to-end
+* Mochawesome — geração de relatórios
+* **:contentReference[oaicite:3]{index=3}** — execução automática dos testes (CI)
+* Git
+
+
+
+
+
+
+
+
 # 📄 Documentação
 
-Durante o desenvolvimento deste projeto também foram produzidos documentos comuns ao processo de Quality Assurance em projetos reais.
+Durante o desenvolvimento deste projeto foram produzidos diversos artefatos utilizados em processos reais de Quality Assurance.
 
-Esses documentos incluem:
+Esses documentos demonstram a estratégia de qualidade adotada no projeto, desde a análise de risco até a automação dos cenários críticos.
 
-* **Plano de Testes**
-* **Casos de Teste**
-* **Análise de Risco**
-* **Estratégia de Automação**
+A documentação inclui:
+
+* **Plano de Testes** — definição do escopo, riscos, premissas e critérios de execução
+* **Análise de Risco** — identificação e priorização das funcionalidades críticas do sistema
+* **Casos de Teste** — cenários definidos para validação das funcionalidades principais
+* **Estratégia de Automação** — critérios e priorização dos testes automatizados
+* **Matriz de Rastreabilidade (RTM)** — relação entre riscos, funcionalidades, casos de teste e automação
+* **Pirâmide de Testes** — definição da estratégia de testes considerando diferentes níveis de validação do sistema
+
+Esses artefatos demonstram uma abordagem estruturada de qualidade, baseada em análise de risco e alinhada com práticas utilizadas em times de engenharia de software.
   
 ---
 
@@ -107,7 +133,9 @@ lumebank-qa-automation
 │   ├── plano-de-testes.md
 │   ├── analise-de-risco.md
 │   ├── casos-de-teste.md
-│   └── estrategia-de-automacao.md
+│   ├── estrategia-de-automacao.md
+│   ├── matriz-de-rastreabilidade.md
+│   └── piramide-de-testes.md
 │  
 ├── cypress.config.js
 ├── package.json
@@ -234,15 +262,19 @@ Esses relatórios permitem visualizar:
 
 # 🔁 Qualidade contínua
 
-Este projeto demonstra algumas práticas importantes utilizadas em times de desenvolvimento:
+Este projeto demonstra práticas utilizadas em processos reais de engenharia de qualidade, incluindo:
 
-* Análise de risco para priorização de cenários críticos
-* Automação focada em Smoke Tests
-* Estrutura de testes baseada em Page Object Model (POM)
-* Execução automática via CI (GitHub Actions)
+* Análise de risco para identificação de funcionalidades críticas
+* Planejamento estruturado de testes
+* Criação de casos de teste baseados em técnicas de projeto de testes
+* Uso de *Matriz de Rastreabilidade (RTM)* para garantir cobertura de riscos
+* Definição da estratégia de testes baseada na *Pirâmide de Testes*
+* Automação focada em *Smoke Tests*
+* Arquitetura de testes baseada em *Page Object Model (POM)*
+* Execução automática via *Integração Contínua*
 * Geração de relatórios de execução
 
-Essas práticas ajudam a garantir que **alterações no sistema não quebrem funcionalidades essenciais para o usuário final**.
+Essas práticas ajudam a garantir que alterações no sistema não comprometam funcionalidades essenciais para o usuário final.
 
 ---
 
@@ -251,4 +283,5 @@ Essas práticas ajudam a garantir que **alterações no sistema não quebrem fun
 **Marcel Abramo**
 
 QA Engineer | Test Automation | Quality Assurance
+
 
