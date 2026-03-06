@@ -1,0 +1,22 @@
+  {
+    "userSuccess": {
+      "username": "bob@lume.com",
+      "password": "password123"
+    },
+
+    "userFail": {
+      "username": "teste@teste.com",
+      "password": "123456"
+    },
+
+    "transferenciaSuccess": {
+      "email": "alice@lume.com",
+      "valor": "50"
+    },
+
+    "transferenciaFail": {
+      "email": "alice@lume.com",
+      "valor": "999999"
+    }
+
+  }
