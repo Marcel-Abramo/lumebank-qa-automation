@@ -68,22 +68,6 @@ Os testes automatizados implementados neste projeto estão concentrados na camad
 
 ---
 
-# 🚀 Tecnologias utilizadas
-
-* JavaScript
-* Node.js
-* **:contentReference[oaicite:2]{index=2}** — automação de testes end-to-end
-* Mochawesome — geração de relatórios
-* **:contentReference[oaicite:3]{index=3}** — execução automática dos testes (CI)
-* Git
-
-
-
-
-
-
-
-
 # 📄 Documentação
 
 Durante o desenvolvimento deste projeto foram produzidos diversos artefatos utilizados em processos reais de Quality Assurance.
@@ -283,5 +267,6 @@ Essas práticas ajudam a garantir que alterações no sistema não comprometam f
 **Marcel Abramo**
 
 QA Engineer | Test Automation | Quality Assurance
+
 
 
