@@ -29,7 +29,7 @@ Smoke Tests são testes rápidos executados após um deploy para garantir que as
 
 Esse conjunto de testes permite validar rapidamente se as funcionalidades essenciais continuam funcionando após um **novo deploy**.
 
-Caso os testes de smoke passem com sucesso, o processo de qualidade pode seguir para:
+Caso os Smoke tests passem com sucesso, o processo de qualidade pode seguir para:
 
 * Testes de integração
 * Testes exploratórios
@@ -267,6 +267,7 @@ Essas práticas ajudam a garantir que alterações no sistema não comprometam f
 **Marcel Abramo**
 
 QA Engineer | Test Automation | Quality Assurance
+
 
 
 
