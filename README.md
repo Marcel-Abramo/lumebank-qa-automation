@@ -1,0 +1,273 @@
+# 🧪 LumeBank QA Automation
+![Cypress Tests](https://github.com/Marcel-Abramo/lumebank-qa-automation/actions/workflows/cypress.yml/badge.svg)
+
+Projeto de automação de testes end-to-end utilizando **Cypress**, com integração contínua via **GitHub Actions**.
+
+O objetivo deste repositório é demonstrar como estruturar um projeto de **Qualidade de Software desde o início**, aplicando práticas reais utilizadas em times de engenharia.<br>
+
+
+---
+
+# 🎯 Objetivo do projeto
+
+Este projeto foi desenvolvido simulando um **Projeto real de QA**, iniciando desde a **Análise de Risco do Produto** até a implementação da automação.
+demonstrando uma abordagem completa de Qualidade de Software, incluindo: 
+* **Análise de risco**
+* **Planejamento de testes**
+* **Definição de cenários críticos e**
+* **Automação focada na proteção das funcionalidades mais importantes para o usuário.**
+
+Antes de iniciar a automação foi realizada uma análise para identificar:
+
+* Quais funcionalidades são **críticas para o usuário**
+* Quais fluxos **não podem falhar em produção**
+* Quais cenários devem ser validados rapidamente após um deploy
+
+A partir dessa análise foi definido um **fluxo crítico do sistema**, que foi automatizado para servir como **Smoke Test**.<br>
+Smoke Tests são testes rápidos executados após um deploy para garantir que as funcionalidades essenciais do sistema continuam operando.
+
+
+Esse conjunto de testes permite validar rapidamente se as funcionalidades essenciais continuam funcionando após um **novo deploy**.
+
+Caso os Smoke tests passem com sucesso, o processo de qualidade pode seguir para:
+
+* Testes de integração
+* Testes exploratórios
+* Testes de regressão
+
+---
+
+# 🧠 Estratégia de Qualidade Aplicada
+
+A estratégia de testes deste projeto foi baseada em **Análise de Risco**, priorizando funcionalidades críticas do sistema.
+
+O objetivo foi identificar quais fluxos possuem maior impacto para o usuário e para o negócio, direcionando o esforço de testes para os cenários que realmente precisam ser protegidos contra falhas.
+
+A abordagem adotada inclui:
+
+* Análise de risco para identificação de funcionalidades críticas
+* Definição de casos de teste baseados em técnicas de projeto de testes
+* Priorização de cenários com maior impacto para o usuário
+* Automação focada em Smoke Tests
+* Execução automática dos testes através de Integração Contínua
+
+Além disso, a estratégia de testes considera os princípios da **Pirâmide de Testes**, equilibrando diferentes níveis de validação do sistema.
+
+Os testes automatizados implementados neste projeto estão concentrados na camada **End-to-End**, validando os fluxos principais da aplicação sob a perspectiva do usuário final.
+
+---
+
+# 🚀 Tecnologias utilizadas
+
+* **JavaScript**
+* **Cypress**
+* **Node.js**
+* **Mochawesome** (relatórios de testes)
+* **GitHub Actions** (CI/CD)
+* **Git**
+
+---
+
+# 📄 Documentação
+
+Durante o desenvolvimento deste projeto foram produzidos diversos artefatos utilizados em processos reais de Quality Assurance.
+
+Esses documentos demonstram a estratégia de qualidade adotada no projeto, desde a análise de risco até a automação dos cenários críticos.
+
+A documentação inclui:
+
+* **Plano de Testes** — definição do escopo, riscos, premissas e critérios de execução
+* **Análise de Risco** — identificação e priorização das funcionalidades críticas do sistema
+* **Casos de Teste** — cenários definidos para validação das funcionalidades principais
+* **Estratégia de Automação** — critérios e priorização dos testes automatizados
+* **Matriz de Rastreabilidade (RTM)** — relação entre riscos, funcionalidades, casos de teste e automação
+* **Pirâmide de Testes** — definição da estratégia de testes considerando diferentes níveis de validação do sistema
+
+Esses artefatos demonstram uma abordagem estruturada de qualidade, baseada em análise de risco e alinhada com práticas utilizadas em times de engenharia de software.
+  
+---
+
+# 📂 Estrutura do projeto
+
+```text
+lumebank-qa-automation
+│
+├── .github
+│   └── workflows
+│       └── cypress.yml
+│
+├── cypress
+│   ├── e2e
+│   │   ├── extrato
+│   │       └── extrato.spec.cy.js
+│   │   ├── login
+│   │       └── login.spec.cy.js
+│   │   ├── transferencia
+│   │       └── transferencia.spec.cy.js
+│   │
+│   ├── pages
+│   │   ├── loginPage.js
+│   │   ├── transferenciaPage.js
+│   │   └── extratoPage.js
+│   │
+│   ├── fixtures
+│   └── support
+│
+├── docs
+│   ├── plano-de-testes.md
+│   ├── analise-de-risco.md
+│   ├── casos-de-teste.md
+│   ├── estrategia-de-automacao.md
+│   ├── matriz-de-rastreabilidade.md
+│   └── piramide-de-testes.md
+│  
+├── cypress.config.js
+├── package.json
+├── package-lock.json
+├── .gitignore
+└── README.md
+```
+
+### Descrição das principais pastas
+
+**cypress/e2e**
+
+Contém os cenários de testes automatizados organizados por domínio funcional do sistema.
+
+Exemplo:
+
+* Login
+* Transferências
+* Extrato
+
+---
+
+**cypress/pages**
+
+Contém as Page Objects, responsáveis por encapsular interações com a interface da aplicação.
+
+Isso traz vantagens como:
+
+* Reutilização de código
+* Melhor manutenção dos testes
+* Separação entre lógica de teste e interação com UI
+
+---
+
+**cypress/fixtures**
+
+Arquivos utilizados para armazenar **dados de teste**.
+
+---
+
+**cypress/support**
+
+Contém **configurações e comandos customizados** utilizados para reutilização nos testes.
+
+---
+
+**.github/workflows**
+
+Contém a pipeline de **Integração Contínua (CI)** responsável por executar automaticamente os testes no GitHub.
+
+Sempre que ocorre:
+
+* um **push**
+* um **Pull Request**
+
+os testes são executados automaticamente.
+
+---
+
+# ▶️ Como executar os testes
+
+Os testes podem ser executados de três formas diferentes.
+
+---
+
+## 1️⃣ Execução em modo interativo (interface do Cypress)
+
+Permite visualizar os testes sendo executados.
+
+```bash
+npx cypress open
+```
+
+---
+
+## 2️⃣ Execução via terminal (modo headless)
+
+Executa os testes diretamente no terminal.
+
+```bash
+npx cypress run
+```
+
+Esse modo é normalmente utilizado em **pipelines de CI**.
+
+---
+
+## 3️⃣ Execução automática via CI (GitHub Actions)
+
+Os testes também são executados automaticamente pelo **GitHub Actions** através da pipeline configurada em:
+
+```
+.github/workflows/cypress.yml
+```
+
+Sempre que um **Pull Request é aberto ou um push é realizado**, o pipeline executa os testes para validar se o sistema continua funcionando corretamente.
+
+---
+
+# 📊 Relatórios de teste
+
+O projeto utiliza o **Mochawesome** para geração de relatórios de execução.
+
+Após rodar os testes:
+
+```bash
+npx cypress run
+```
+
+Os relatórios são gerados na pasta:
+
+```
+cypress/reports
+```
+
+Esses relatórios permitem visualizar:
+
+* Cenários executados
+* Cenários que passaram
+* Cenários que falharam
+* Tempo de execução
+
+---
+
+# 🔁 Qualidade contínua
+
+Este projeto demonstra práticas utilizadas em processos reais de engenharia de qualidade, incluindo:
+
+* Análise de risco para identificação de funcionalidades críticas
+* Planejamento estruturado de testes
+* Criação de casos de teste baseados em técnicas de projeto de testes
+* Uso de *Matriz de Rastreabilidade (RTM)* para garantir cobertura de riscos
+* Definição da estratégia de testes baseada na *Pirâmide de Testes*
+* Automação focada em *Smoke Tests*
+* Arquitetura de testes baseada em *Page Object Model (POM)*
+* Execução automática via *Integração Contínua*
+* Geração de relatórios de execução
+
+Essas práticas ajudam a garantir que alterações no sistema não comprometam funcionalidades essenciais para o usuário final.
+
+---
+
+# 👨‍💻 Autor
+
+**Marcel Abramo**
+
+QA Engineer | Test Automation | Quality Assurance
+
+
+
+
